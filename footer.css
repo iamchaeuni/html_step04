@@ -1,0 +1,87 @@
+body {
+    color: #444444;
+
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tit {
+    line-height: 1;
+}
+
+.flex {
+    display: flex;
+    /* 가로 배치 */
+    flex-direction: row;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.header {
+    line-height: 100%;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header .inner {
+    justify-content: space-between;
+}
+
+.header .gnb>ul {
+    gap: 60px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li~li::before {
+    /* 형제 선택자니까 자신은 무시하기 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
+    /* menu 사이마다 선으로 간격주기 */
+}
+
+.mainVisual {
+    position: relative;
+    height: 700px;
+    background: url(./main01.jpg) no-repeat center center/cover;
+    /* 뒤에 배경 깔 때 주로 이렇게 사용하니까 그냥 이거 외워두기  */
+}
+
+.mainVisual .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 팝업창 -> 이 조건들 그냥 외워두기 */
+}
+
+.mainVisual .inner h2 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    /* text-indent: -4px;
+    text-indent이거는 폰트 디자인에 대한 크기 줄이는거 */
+    margin: 0 0 35px 0;
+}
+
+.mainVisual .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 25px;
+}
